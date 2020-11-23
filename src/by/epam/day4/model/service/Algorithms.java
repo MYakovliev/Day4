@@ -1,6 +1,6 @@
-package by.epam.day4.tasks.model.service;
+package by.epam.day4.model.service;
 
-import by.epam.day4.tasks.model.entity.Array;
+import by.epam.day4.model.entity.Array;
 
 
 public class Algorithms {

@@ -1,13 +1,12 @@
-package by.epam.day4.tasks.util;
+package by.epam.day4.util;
 
-import by.epam.day4.tasks.exceptions.NotEnoughDataInFileException;
-import by.epam.day4.tasks.model.entity.Array;
-import by.epam.day4.tasks.veiw.Output;
+import by.epam.day4.exceptions.NotEnoughDataInFileException;
+import by.epam.day4.model.entity.Array;
+import by.epam.day4.veiw.Output;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 

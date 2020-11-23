@@ -1,4 +1,4 @@
-package by.epam.day4.tasks.veiw;
+package by.epam.day4.veiw;
 
 public class Output {
     public <T> void consolePrint(T string) {

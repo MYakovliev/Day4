@@ -1,10 +1,10 @@
-package by.epam.day4.tasks.model.service;
+package by.epam.day4.model.service;
 
-import by.epam.day4.tasks.model.entity.Array;
+import by.epam.day4.model.entity.Array;
 
 import java.util.Random;
 
-import by.epam.day4.tasks.util.Input;
+import by.epam.day4.util.Input;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

@@ -1,7 +1,7 @@
-package by.epam.day4.tasks.veiw;
+package by.epam.day4.veiw;
 
-import by.epam.day4.tasks.model.entity.Array;
-import by.epam.day4.tasks.model.service.ArrayService;
+import by.epam.day4.model.entity.Array;
+import by.epam.day4.model.service.ArrayService;
 
 import java.util.Random;
 

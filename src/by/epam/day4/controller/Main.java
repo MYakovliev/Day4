@@ -1,13 +1,11 @@
-package by.epam.day4.tasks.controller;
+package by.epam.day4.controller;
 
-import by.epam.day4.tasks.model.entity.Array;
-import by.epam.day4.tasks.model.entity.JaggerArray;
-import by.epam.day4.tasks.model.service.Algorithms;
-import by.epam.day4.tasks.model.service.ArrayService;
-import by.epam.day4.tasks.model.service.JaggerArrayService;
-import by.epam.day4.tasks.util.Input;
-import by.epam.day4.tasks.veiw.Output;
-import by.epam.day4.tasks.veiw.Reports;
+import by.epam.day4.model.entity.Array;
+import by.epam.day4.model.entity.JaggerArray;
+import by.epam.day4.model.service.ArrayService;
+import by.epam.day4.model.service.JaggerArrayService;
+import by.epam.day4.veiw.Output;
+import by.epam.day4.veiw.Reports;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,7 +16,6 @@ public class Main {
         StringBuilder sb = new StringBuilder();
         Output output = new Output();
         try {
-            Algorithms algorithms = new Algorithms();
             Reports reports = new Reports();
             ArrayService arrayService = new ArrayService();
             JaggerArrayService jaggerArrayService = new JaggerArrayService();
@@ -26,6 +23,7 @@ public class Main {
             arrayService.fulfillArrayRandomly(array);
             sb.append("Array fulfilled randomly:\n").append(array);
             arrayService.insertionSort(array);
+            logger.warn("Warning, a huge warning");
             sb.append("\n After insertion sorting:\n").append(array);
             sb.append(reports.binarySearchReport(array));
             sb.append(reports.findingMaxAndMinReport(array));

@@ -1,7 +1,7 @@
-package by.epam.day4.tasks.model.service;
+package by.epam.day4.model.service;
 
-import by.epam.day4.tasks.model.entity.Array;
-import by.epam.day4.tasks.model.entity.JaggerArray;
+import by.epam.day4.model.entity.Array;
+import by.epam.day4.model.entity.JaggerArray;
 
 public class JaggerArrayService {
     private static ArrayService arrayService = new ArrayService();

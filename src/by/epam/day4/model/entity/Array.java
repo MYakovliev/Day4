@@ -1,4 +1,4 @@
-package by.epam.day4.tasks.model.entity;
+package by.epam.day4.model.entity;
 
 import java.util.Arrays;
 

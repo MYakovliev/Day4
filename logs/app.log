@@ -1,1 +1,4 @@
 2020.23.11  00:26:17 [main] ERROR by.epam.day4.tasks.model.service.ArrayService - infinite loop ending
+2020.23.11  08:32:32 [main] ERROR by.epam.day4.tasks.model.service.ArrayService - infinite loop ending
+2020.23.11  08:33:38 [main] WARN  by.epam.day4.tasks.controller.Main - Warning, a huge warning
+2020.23.11  08:33:38 [main] ERROR by.epam.day4.tasks.model.service.ArrayService - infinite loop ending

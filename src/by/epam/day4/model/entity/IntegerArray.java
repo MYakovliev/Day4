@@ -58,7 +58,7 @@ public class IntegerArray {
 
     @Override
     public int hashCode() {
-        return Arrays.hashCode(getArr());
+        return Arrays.hashCode(arr);
     }
 
     @Override

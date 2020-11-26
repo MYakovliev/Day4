@@ -71,7 +71,7 @@ public class ArrayServiceAlgorithm {
         IntegerArray withoutDuplicated = new IntegerArray(integerArray.size());
         int i = 0;
         for (int element : integerArray.getArr()) {
-            if (element == element % Math.pow(10, numberOfDigits)) {
+            if (element == element % Math.pow(10, numberOfDigits) && element > Math.pow(10, numberOfDigits - 1)) {
                 if (NUMBER_ALGORITHMS.noDuplicateDigits(element, numberOfDigits)) {
                     withoutDuplicated.setElement(i++, element);
                 }

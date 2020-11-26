@@ -37,10 +37,16 @@ public class JaggerArray {
     }
 
     public void setElement(int row, Array array){
+        if (row >= jaggerArray.length || row < 0) {
+            throw new IndexOutOfBoundsException("invalid row index");
+        }
         jaggerArray[row] = array;
     }
 
     public void setElement(int row, int col, int value){
+        if (row >= jaggerArray.length || row < 0) {
+            throw new IndexOutOfBoundsException("invalid row index");
+        }
         jaggerArray[row].setElement(col, value);
     }
 

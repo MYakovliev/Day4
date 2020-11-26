@@ -4,13 +4,13 @@ import by.epam.day4.model.entity.Array;
 import by.epam.day4.model.entity.JaggerArray;
 
 public class JaggerArrayService {
-    private static ArrayService arrayService = new ArrayService();
+    private static ArrayServiceAlgorithm arrayServiceAlgorithm = new ArrayServiceAlgorithm();
 
     public void sortByRowsSum(JaggerArray array) {
         for (int i = 0; i < array.size(); i++) {
             for (int j = 1; j < array.size(); j++) {
-                int prevSum = arrayService.calculateSum(array.getElement(j - 1));
-                int nowSum = arrayService.calculateSum(array.getElement(j));
+                int prevSum = arrayServiceAlgorithm.calculateSum(array.getElement(j - 1));
+                int nowSum = arrayServiceAlgorithm.calculateSum(array.getElement(j));
                 if (nowSum < prevSum) {
                     swap(array, j - 1, j);
                 }
@@ -40,8 +40,8 @@ public class JaggerArrayService {
     public void sortByMaxElement(JaggerArray array){
         for (int i = 0; i < array.size(); i++) {
             for (int j = 1; j < array.size(); j++) {
-                int prevMax = arrayService.findMax(array.getElement(j - 1));
-                int nowMax = arrayService.findMax(array.getElement(j));
+                int prevMax = arrayServiceAlgorithm.findMax(array.getElement(j - 1));
+                int nowMax = arrayServiceAlgorithm.findMax(array.getElement(j));
                 if (nowMax < prevMax) {
                     swap(array, j - 1, j);
                 }
@@ -59,8 +59,8 @@ public class JaggerArrayService {
     public void sortByMinElement(JaggerArray array){
         for (int i = 0; i < array.size(); i++) {
             for (int j = 1; j < array.size(); j++) {
-                int prevMax = arrayService.findMin(array.getElement(j - 1));
-                int nowMax = arrayService.findMin(array.getElement(j));
+                int prevMax = arrayServiceAlgorithm.findMin(array.getElement(j - 1));
+                int nowMax = arrayServiceAlgorithm.findMin(array.getElement(j));
                 if (nowMax < prevMax) {
                     swap(array, j - 1, j);
                 }

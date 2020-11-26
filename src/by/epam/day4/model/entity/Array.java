@@ -22,14 +22,14 @@ public class Array {
     }
 
     public int getElement(int index) {
-        if (index >= arr.length) {
+        if (index >= arr.length || index < 0) {
             throw new IndexOutOfBoundsException("invalid index");
         }
         return arr[index];
     }
 
     public void setElement(int index, int value) {
-        if (index >= arr.length) {
+        if (index >= arr.length || index < 0) {
             throw new IndexOutOfBoundsException("invalid index");
         }
         arr[index] = value;

@@ -3,7 +3,7 @@ package by.epam.day4.model.service;
 import by.epam.day4.model.entity.Array;
 
 
-public class Algorithms {
+public class NumberAlgorithms {
     public boolean isPrimary(int number) {
         for (int i = number / 2; i > 1; i--) {
             if (number % i == 0) {

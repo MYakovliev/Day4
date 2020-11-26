@@ -2,3 +2,13 @@
 2020.23.11  08:32:32 [main] ERROR by.epam.day4.tasks.model.service.ArrayService - infinite loop ending
 2020.23.11  08:33:38 [main] WARN  by.epam.day4.tasks.controller.Main - Warning, a huge warning
 2020.23.11  08:33:38 [main] ERROR by.epam.day4.tasks.model.service.ArrayService - infinite loop ending
+2020.25.11  00:24:20 [main] WARN  by.epam.day4.controller.Main - Warning, a huge warning
+2020.25.11  00:24:20 [main] ERROR by.epam.day4.model.service.ArrayService - infinite loop ending
+2020.25.11  00:24:45 [main] ERROR by.epam.day4.controller.Main - null
+2020.25.11  00:53:10 [main] WARN  by.epam.day4.controller.Main - Warning, a huge warning
+2020.25.11  00:53:10 [main] ERROR by.epam.day4.model.service.ArrayService - infinite loop ending
+2020.25.11  10:39:17 [main] WARN  by.epam.day4.controller.Main - Warning, a huge warning
+2020.25.11  10:39:17 [main] ERROR by.epam.day4.model.service.ArrayService - infinite loop ending
+2020.25.11  22:28:46 [main] WARN  by.epam.day4.controller.Main - Warning, a huge warning
+2020.25.11  22:54:30 [main] WARN  by.epam.day4.controller.Main - Warning, a huge warning
+2020.26.11  00:15:17 [main] ERROR by.epam.day4.util.Input - not enough data in data.txt

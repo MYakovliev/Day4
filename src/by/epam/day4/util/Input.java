@@ -24,8 +24,8 @@ public class Input {
         return getIntFromConsole();
     }
 
-    public Array getIntArrayFromFile(String filename, int amount) {
-        Array array = new Array(amount);
+    public void getIntArrayFromFile(String filename, Array array) {
+        int amount = array.size();
         int index = 0;
         try(FileInputStream file = new FileInputStream(filename)) {
             int i;
@@ -49,7 +49,5 @@ public class Input {
         } catch (IOException | NotEnoughDataInFileException e) {
             logger.error(e.getMessage());
         }
-
-        return array;
     }
 }

@@ -3,51 +3,51 @@ package by.epam.day4.model.entity;
 import java.util.Arrays;
 
 public class JaggerArray {
-    Array[] jaggerArray;
+    IntegerArray[] jaggerIntegerArray;
 
     public JaggerArray(int rows){
-        jaggerArray = new Array[rows];
+        jaggerIntegerArray = new IntegerArray[rows];
     }
 
     public JaggerArray(int rows, int cols){
-        jaggerArray = new Array[rows];
+        jaggerIntegerArray = new IntegerArray[rows];
         for (int i = 0; i < rows; i++) {
-            jaggerArray[i] = new Array(cols);
+            jaggerIntegerArray[i] = new IntegerArray(cols);
         }
     }
 
     public int size(){
-        return jaggerArray.length;
+        return jaggerIntegerArray.length;
     }
 
-    public Array[] getJaggerArray() {
-        return jaggerArray;
+    public IntegerArray[] getJaggerArray() {
+        return jaggerIntegerArray;
     }
 
-    public void setJaggerArray(Array[] jaggerArray) {
-        this.jaggerArray = jaggerArray;
+    public void setJaggerArray(IntegerArray[] jaggerIntegerArray) {
+        this.jaggerIntegerArray = jaggerIntegerArray;
     }
 
-    public Array getElement(int row){
-        return jaggerArray[row];
+    public IntegerArray getElement(int row){
+        return jaggerIntegerArray[row];
     }
 
     public int getElement(int row, int col){
-        return jaggerArray[row].getElement(col);
+        return jaggerIntegerArray[row].getElement(col);
     }
 
-    public void setElement(int row, Array array){
-        if (row >= jaggerArray.length || row < 0) {
+    public void setElement(int row, IntegerArray integerArray){
+        if (row >= jaggerIntegerArray.length || row < 0) {
             throw new IndexOutOfBoundsException("invalid row index");
         }
-        jaggerArray[row] = array;
+        jaggerIntegerArray[row] = integerArray;
     }
 
     public void setElement(int row, int col, int value){
-        if (row >= jaggerArray.length || row < 0) {
+        if (row >= jaggerIntegerArray.length || row < 0) {
             throw new IndexOutOfBoundsException("invalid row index");
         }
-        jaggerArray[row].setElement(col, value);
+        jaggerIntegerArray[row].setElement(col, value);
     }
 
     @Override
@@ -66,8 +66,8 @@ public class JaggerArray {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("JaggerArray{").append("\n");
-        for (Array array: jaggerArray){
-            sb.append(array).append("\n");
+        for (IntegerArray integerArray : jaggerIntegerArray){
+            sb.append(integerArray).append("\n");
         }
         sb.append('}');
         return sb.toString();

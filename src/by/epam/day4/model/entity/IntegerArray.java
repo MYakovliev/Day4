@@ -2,14 +2,14 @@ package by.epam.day4.model.entity;
 
 import java.util.Arrays;
 
-public class Array {
+public class IntegerArray {
     private int[] arr;
 
-    public Array(int size) {
+    public IntegerArray(int size) {
         arr = new int[size];
     }
 
-    public Array(int... arr) {
+    public IntegerArray(int... arr) {
         setArr(arr);
     }
 
@@ -52,8 +52,8 @@ public class Array {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Array array = (Array) o;
-        return Arrays.equals(getArr(), array.getArr());
+        IntegerArray integerArray = (IntegerArray) o;
+        return Arrays.equals(getArr(), integerArray.getArr());
     }
 
     @Override

@@ -1,7 +1,7 @@
 package by.epam.day4.util;
 
 import by.epam.day4.exceptions.NotEnoughDataInFileException;
-import by.epam.day4.model.entity.Array;
+import by.epam.day4.model.entity.IntegerArray;
 import by.epam.day4.veiw.Output;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,8 +24,8 @@ public class Input {
         return getIntFromConsole();
     }
 
-    public void getIntArrayFromFile(String filename, Array array) {
-        int amount = array.size();
+    public void getIntArrayFromFile(String filename, IntegerArray integerArray) {
+        int amount = integerArray.size();
         int index = 0;
         try(FileInputStream file = new FileInputStream(filename)) {
             int i;
@@ -37,7 +37,7 @@ public class Input {
                 }
                 if ((char) i == ' ' || file.available() == 0) {
                     int element = Integer.parseInt(buf);
-                    array.setElement(index++, element);
+                    integerArray.setElement(index++, element);
                     buf = "";
                 } else {
                     buf += (char)i;

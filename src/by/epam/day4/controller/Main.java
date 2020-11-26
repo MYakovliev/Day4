@@ -1,6 +1,6 @@
 package by.epam.day4.controller;
 
-import by.epam.day4.model.entity.Array;
+import by.epam.day4.model.entity.IntegerArray;
 import by.epam.day4.model.entity.JaggerArray;
 import by.epam.day4.model.service.ArrayServiceAlgorithm;
 import by.epam.day4.model.service.ArrayServiceFulfill;
@@ -24,17 +24,17 @@ public class Main {
             ArrayServiceAlgorithm arrayServiceAlgorithm = new ArrayServiceAlgorithm();
             ArrayServiceSorting arrayServiceSorting = new ArrayServiceSorting();
             JaggerArrayService jaggerArrayService = new JaggerArrayService();
-            Array array = new Array(15);
-            arrayServiceFulfill.fulfillArrayRandomly(array, 1000);
-            sb.append("Array fulfilled randomly:\n").append(array);
-            arrayServiceSorting.insertionSort(array);
+            IntegerArray integerArray = new IntegerArray(15);
+            arrayServiceFulfill.fulfillArrayRandomly(integerArray, 1000);
+            sb.append("Array fulfilled randomly:\n").append(integerArray);
+            arrayServiceSorting.insertionSort(integerArray);
             logger.warn("Warning, a huge warning");
-            sb.append("\n After insertion sorting:\n").append(array);
-            sb.append(reports.binarySearchReport(array));
-            sb.append(reports.findingMaxAndMinReport(array));
-            sb.append(reports.findingAllPrimaryReport(array));
-            sb.append(reports.findingAllFibonacciReport(array));
-            sb.append(reports.findingAllNoDuplicateAboveThousand(array));
+            sb.append("\n After insertion sorting:\n").append(integerArray);
+            sb.append(reports.binarySearchReport(integerArray));
+            sb.append(reports.findingMaxAndMinReport(integerArray));
+            sb.append(reports.findingAllPrimaryReport(integerArray));
+            sb.append(reports.findingAllFibonacciReport(integerArray));
+            sb.append(reports.findingAllNoDuplicateAboveThousand(integerArray));
 
             JaggerArray jaggerArray = new JaggerArray(10, 5);
             for (int i = 0; i < 10; i++){

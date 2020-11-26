@@ -1,6 +1,6 @@
 package by.epam.day4.model.service;
 
-import by.epam.day4.model.entity.Array;
+import by.epam.day4.model.entity.IntegerArray;
 
 
 public class NumberAlgorithms {
@@ -28,18 +28,18 @@ public class NumberAlgorithms {
     }
 
     public boolean noDuplicateDigits(int number, int digitsInNumber) {
-        Array array = new Array(digitsInNumber);
+        IntegerArray integerArray = new IntegerArray(digitsInNumber);
         for (int i = 0; i < digitsInNumber; i++) {
-            array.setElement(i, -1);
+            integerArray.setElement(i, -1);
         }
         number = Math.abs(number);
         int i = 0;
         while (number > 0) {
             int digit = number % 10;
-            if (array.contains(digit)) {
+            if (integerArray.contains(digit)) {
                 return false;
             }
-            array.setElement(i++, digit);
+            integerArray.setElement(i++, digit);
             number /= 10;
         }
 

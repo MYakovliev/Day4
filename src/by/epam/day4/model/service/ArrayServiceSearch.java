@@ -1,28 +1,28 @@
 package by.epam.day4.model.service;
 
-import by.epam.day4.model.entity.Array;
+import by.epam.day4.model.entity.IntegerArray;
 
 public class ArrayServiceSearch {
-    public int searchElementIndexBinary(Array array, int element) {
-        int left = 0, right = array.size() - 1;
+    public int searchElementIndexBinary(IntegerArray integerArray, int element) {
+        int left = 0, right = integerArray.size() - 1;
         while (left != right) {
             int middle = (left + right) / 2;
-            if (array.getElement(middle) == element) {
+            if (integerArray.getElement(middle) == element) {
                 return middle;
             }
 
-            if (array.getElement(middle) > element) {
+            if (integerArray.getElement(middle) > element) {
                 right = middle - 1;
-            } else if (array.getElement(middle) < element) {
+            } else if (integerArray.getElement(middle) < element) {
                 left = middle + 1;
             }
         }
         return -1;
     }
 
-    public int searchElement(Array array, int element){
-        for (int i = 0; i < array.size(); i++) {
-            if (array.getElement(i) == element){
+    public int searchElement(IntegerArray integerArray, int element){
+        for (int i = 0; i < integerArray.size(); i++) {
+            if (integerArray.getElement(i) == element){
                 return i;
             }
         }

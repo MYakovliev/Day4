@@ -1,6 +1,6 @@
 package by.epam.day4.model.service;
 
-import by.epam.day4.model.entity.Array;
+import by.epam.day4.model.entity.IntegerArray;
 import by.epam.day4.model.entity.JaggerArray;
 
 public class JaggerArrayService {
@@ -26,7 +26,7 @@ public class JaggerArrayService {
     }
 
     public void swap(JaggerArray array, int row, int row1) {
-        Array temp = array.getElement(row);
+        IntegerArray temp = array.getElement(row);
         array.setElement(row, array.getElement(row1));
         array.setElement(row1, temp);
     }

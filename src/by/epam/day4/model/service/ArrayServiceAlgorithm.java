@@ -1,6 +1,6 @@
 package by.epam.day4.model.service;
 
-import by.epam.day4.model.entity.Array;
+import by.epam.day4.model.entity.IntegerArray;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,9 +11,9 @@ public class ArrayServiceAlgorithm {
 
     private static final NumberAlgorithms NUMBER_ALGORITHMS = new NumberAlgorithms();
 
-    public int findMax(Array array) {
-        int max = array.getElement(0);
-        for (int i : array.getArr()) {
+    public int findMax(IntegerArray integerArray) {
+        int max = integerArray.getElement(0);
+        for (int i : integerArray.getArr()) {
             if (i > max) {
                 max = i;
             }
@@ -21,9 +21,9 @@ public class ArrayServiceAlgorithm {
         return max;
     }
 
-    public int findMin(Array array) {
-        int min = array.getElement(0);
-        for (int i : array.getArr()) {
+    public int findMin(IntegerArray integerArray) {
+        int min = integerArray.getElement(0);
+        for (int i : integerArray.getArr()) {
             if (i < min) {
                 min = i;
             }
@@ -31,80 +31,80 @@ public class ArrayServiceAlgorithm {
         return min;
     }
 
-    public Array findAllPrimary(Array array) {
-        Array primary = new Array(array.size());
+    public IntegerArray findAllPrimary(IntegerArray integerArray) {
+        IntegerArray primary = new IntegerArray(integerArray.size());
         int i = 0;
-        for (int element : array.getArr()) {
+        for (int element : integerArray.getArr()) {
             if (NUMBER_ALGORITHMS.isPrimary(element)) {
                 primary.setElement(i++, element);
             }
         }
-        if (i == array.size()) {
+        if (i == integerArray.size()) {
             return primary;
         }
-        Array result = new Array(i);
+        IntegerArray result = new IntegerArray(i);
         if (i >= 0) {
             System.arraycopy(primary.getArr(), 0, result.getArr(), 0, i);
         }
         return result;
     }
 
-    public Array findAllFibonacci(Array array) {
-        Array fibonacci = new Array(array.size());
+    public IntegerArray findAllFibonacci(IntegerArray integerArray) {
+        IntegerArray fibonacci = new IntegerArray(integerArray.size());
         int i = 0;
-        for (int element : array.getArr()) {
+        for (int element : integerArray.getArr()) {
             if (NUMBER_ALGORITHMS.isFibonacciNumber(element)) {
                 fibonacci.setElement(i++, element);
             }
         }
-        if (i == array.size()) {
+        if (i == integerArray.size()) {
             return fibonacci;
         }
-        Array result = new Array(i);
+        IntegerArray result = new IntegerArray(i);
         if (i >= 0) {
             System.arraycopy(fibonacci.getArr(), 0, result.getArr(), 0, i);
         }
         return result;
     }
 
-    public Array findAllWithoutDuplicatedDigits(Array array, int numberOfDigits) {
-        Array withoutDuplicated = new Array(array.size());
+    public IntegerArray findAllWithoutDuplicatedDigits(IntegerArray integerArray, int numberOfDigits) {
+        IntegerArray withoutDuplicated = new IntegerArray(integerArray.size());
         int i = 0;
-        for (int element : array.getArr()) {
+        for (int element : integerArray.getArr()) {
             if (element == element % Math.pow(10, numberOfDigits)) {
                 if (NUMBER_ALGORITHMS.noDuplicateDigits(element, numberOfDigits)) {
                     withoutDuplicated.setElement(i++, element);
                 }
             }
         }
-        if (i == array.size()) {
+        if (i == integerArray.size()) {
             return withoutDuplicated;
         }
-        Array result = new Array(i);
+        IntegerArray result = new IntegerArray(i);
         if (i >= 0) {
             System.arraycopy(withoutDuplicated.getArr(), 0, result.getArr(), 0, i);
         }
         return result;
     }
 
-    public int calculateSum(Array array) {
+    public int calculateSum(IntegerArray integerArray) {
         int sum = 0;
-        for (int i = 0; i < array.size(); i++) {
-            sum += array.getElement(i);
+        for (int i = 0; i < integerArray.size(); i++) {
+            sum += integerArray.getElement(i);
         }
         return sum;
     }
 
-    public void reverse(Array array) {
-        for (int i = 0; i < array.size() / 2; i++) {
-            swap(array, i, array.size() - 1 - i);
+    public void reverse(IntegerArray integerArray) {
+        for (int i = 0; i < integerArray.size() / 2; i++) {
+            swap(integerArray, i, integerArray.size() - 1 - i);
         }
     }
 
-    public void swap(Array array, int index1, int index2) {
-        int temp = array.getElement(index1);
-        array.setElement(index1, array.getElement(index2));
-        array.setElement(index2, temp);
+    public void swap(IntegerArray integerArray, int index1, int index2) {
+        int temp = integerArray.getElement(index1);
+        integerArray.setElement(index1, integerArray.getElement(index2));
+        integerArray.setElement(index2, temp);
     }
 
 }

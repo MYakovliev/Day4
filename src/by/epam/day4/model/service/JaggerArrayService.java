@@ -59,9 +59,9 @@ public class JaggerArrayService {
     public void sortByMinElement(JaggerArray array){
         for (int i = 0; i < array.size(); i++) {
             for (int j = 1; j < array.size(); j++) {
-                int prevMax = arrayServiceAlgorithm.findMin(array.getElement(j - 1));
-                int nowMax = arrayServiceAlgorithm.findMin(array.getElement(j));
-                if (nowMax < prevMax) {
+                int prevMin = arrayServiceAlgorithm.findMin(array.getElement(j - 1));
+                int nowMin = arrayServiceAlgorithm.findMin(array.getElement(j));
+                if (nowMin > prevMin) {
                     swap(array, j - 1, j);
                 }
             }

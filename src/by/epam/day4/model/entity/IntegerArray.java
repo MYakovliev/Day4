@@ -13,8 +13,8 @@ public class IntegerArray {
         setArr(arr);
     }
 
-    public int[] getArr() {
-        return arr;
+    public int[] getArr(){
+        return arr.clone();
     }
 
     public void setArr(int[] arr) {
@@ -35,15 +35,6 @@ public class IntegerArray {
         arr[index] = value;
     }
 
-    public boolean contains(int element) {
-        for (int i = 0; i < size(); i++) {
-            if (element == getElement(i)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public int size() {
         return arr.length;
     }
@@ -53,7 +44,15 @@ public class IntegerArray {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         IntegerArray integerArray = (IntegerArray) o;
-        return Arrays.equals(getArr(), integerArray.getArr());
+        if (size() != integerArray.size() || hashCode() != integerArray.hashCode()){
+            return false;
+        }
+        for (int i = 0; i < size(); i++) {
+            if (getElement(i) != integerArray.getElement(i)){
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override

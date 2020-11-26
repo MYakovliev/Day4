@@ -10,19 +10,18 @@ public class ArrayServiceSearch {
             if (integerArray.getElement(middle) == element) {
                 return middle;
             }
-
             if (integerArray.getElement(middle) > element) {
                 right = middle - 1;
             } else if (integerArray.getElement(middle) < element) {
                 left = middle + 1;
             }
         }
-        return -1;
+        return element == integerArray.getElement(left) ? left : -1;
     }
 
-    public int searchElement(IntegerArray integerArray, int element){
+    public int searchElementIndex(IntegerArray integerArray, int element) {
         for (int i = 0; i < integerArray.size(); i++) {
-            if (integerArray.getElement(i) == element){
+            if (integerArray.getElement(i) == element) {
                 return i;
             }
         }

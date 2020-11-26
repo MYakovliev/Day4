@@ -25,29 +25,6 @@ public class Input {
     }
 
     public void getIntArrayFromFile(String filename, IntegerArray integerArray) {
-        int amount = integerArray.size();
-        int index = 0;
-        try(FileInputStream file = new FileInputStream(filename)) {
-            int i;
-            String buf = "";
-            while (file.available() > 0 && index < amount) {
-                i = file.read();
-                if (file.available() == 0 && (char)i != ' '){
-                    buf += (char)i;
-                }
-                if ((char) i == ' ' || file.available() == 0) {
-                    int element = Integer.parseInt(buf);
-                    integerArray.setElement(index++, element);
-                    buf = "";
-                } else {
-                    buf += (char)i;
-                }
-            }
-            if (index < amount) {
-                throw new NotEnoughDataInFileException("not enough data in " + filename);
-            }
-        } catch (IOException | NotEnoughDataInFileException e) {
-            logger.error(e.getMessage());
-        }
+
     }
 }

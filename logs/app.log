@@ -12,3 +12,13 @@
 2020.25.11  22:28:46 [main] WARN  by.epam.day4.controller.Main - Warning, a huge warning
 2020.25.11  22:54:30 [main] WARN  by.epam.day4.controller.Main - Warning, a huge warning
 2020.26.11  00:15:17 [main] ERROR by.epam.day4.util.Input - not enough data in data.txt
+2020.26.11  11:56:28 [main] WARN  by.epam.day4.controller.Main - Warning, a huge warning
+2020.26.11  11:56:55 [main] WARN  by.epam.day4.controller.Main - Warning, a huge warning
+2020.26.11  11:57:19 [main] WARN  by.epam.day4.controller.Main - Warning, a huge warning
+2020.26.11  12:02:06 [main] WARN  by.epam.day4.controller.Main - Warning, a huge warning
+2020.26.11  12:02:18 [main] ERROR by.epam.day4.util.Input - data.txt (Не удается найти указанный файл)
+2020.26.11  12:28:23 [main] ERROR by.epam.day4.model.service.ArrayServiceFulfill - not enough data in data\data.txt
+2020.26.11  12:43:58 [main] WARN  by.epam.day4.controller.Main - Warning, a huge warning
+2020.26.11  12:45:52 [main] WARN  by.epam.day4.controller.Main - Warning, a huge warning
+2020.26.11  12:56:25 [main] WARN  by.epam.day4.controller.Main - Warning, a huge warning
+2020.26.11  13:07:45 [main] ERROR by.epam.day4.model.service.ArrayServiceFulfill - not enough data in data\data.txt

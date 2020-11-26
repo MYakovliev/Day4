@@ -11,7 +11,7 @@ public class IntegerArrayServiceFulfillTest {
     public void testFulfillArrayFromFilePositive() {
         IntegerArray expected = new IntegerArray(21, 12, 45, 78, 52);
         IntegerArray actual = new IntegerArray(5);
-        arrayServiceFulfill.fulfillArrayFromFile("data.txt", actual);
+        arrayServiceFulfill.fulfillArrayFromFile("data\\data.txt", actual);
         assertEquals(actual, expected);
     }
 
@@ -19,7 +19,7 @@ public class IntegerArrayServiceFulfillTest {
     public void testFulfillArrayFromFileNegative() {
         IntegerArray expected = new IntegerArray(21, 12, 45, 78, 52, 12);
         IntegerArray actual = new IntegerArray(6);
-        arrayServiceFulfill.fulfillArrayFromFile("data.txt", actual);
+        arrayServiceFulfill.fulfillArrayFromFile("data\\data.txt", actual);
         assertNotEquals(actual, expected);
     }
 

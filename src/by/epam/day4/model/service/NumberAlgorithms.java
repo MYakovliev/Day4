@@ -34,9 +34,10 @@ public class NumberAlgorithms {
         }
         number = Math.abs(number);
         int i = 0;
+        ArrayServiceSearch arrayServiceSearch = new ArrayServiceSearch();
         while (number > 0) {
             int digit = number % 10;
-            if (integerArray.contains(digit)) {
+            if (arrayServiceSearch.searchElementIndex(integerArray, digit) != -1) {
                 return false;
             }
             integerArray.setElement(i++, digit);

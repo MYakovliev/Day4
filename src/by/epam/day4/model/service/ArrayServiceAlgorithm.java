@@ -5,6 +5,8 @@ import by.epam.day4.model.entity.IntegerArray;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Arrays;
+
 
 public class ArrayServiceAlgorithm {
     private static final Logger logger = LogManager.getLogger();
@@ -44,7 +46,7 @@ public class ArrayServiceAlgorithm {
         }
         IntegerArray result = new IntegerArray(i);
         if (i >= 0) {
-            System.arraycopy(primary.getArr(), 0, result.getArr(), 0, i);
+            result = new IntegerArray(Arrays.copyOfRange(primary.getArr(),0, i));
         }
         return result;
     }
@@ -62,7 +64,7 @@ public class ArrayServiceAlgorithm {
         }
         IntegerArray result = new IntegerArray(i);
         if (i >= 0) {
-            System.arraycopy(fibonacci.getArr(), 0, result.getArr(), 0, i);
+            result = new IntegerArray(Arrays.copyOfRange(fibonacci.getArr(),0, i));
         }
         return result;
     }
@@ -82,7 +84,7 @@ public class ArrayServiceAlgorithm {
         }
         IntegerArray result = new IntegerArray(i);
         if (i >= 0) {
-            System.arraycopy(withoutDuplicated.getArr(), 0, result.getArr(), 0, i);
+            result = new IntegerArray(Arrays.copyOfRange(withoutDuplicated.getArr(),0, i));
         }
         return result;
     }

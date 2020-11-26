@@ -2,7 +2,6 @@ package by.epam.day4.controller;
 
 import by.epam.day4.model.entity.IntegerArray;
 import by.epam.day4.model.entity.JaggerArray;
-import by.epam.day4.model.service.ArrayServiceAlgorithm;
 import by.epam.day4.model.service.ArrayServiceFulfill;
 import by.epam.day4.model.service.ArrayServiceSorting;
 import by.epam.day4.model.service.JaggerArrayService;
@@ -10,6 +9,8 @@ import by.epam.day4.veiw.Output;
 import by.epam.day4.veiw.Reports;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.Random;
 
 
 public class Main {
@@ -21,7 +22,6 @@ public class Main {
         try {
             ArrayServiceFulfill arrayServiceFulfill = new ArrayServiceFulfill();
             Reports reports = new Reports();
-            ArrayServiceAlgorithm arrayServiceAlgorithm = new ArrayServiceAlgorithm();
             ArrayServiceSorting arrayServiceSorting = new ArrayServiceSorting();
             JaggerArrayService jaggerArrayService = new JaggerArrayService();
             IntegerArray integerArray = new IntegerArray(15);
@@ -37,8 +37,11 @@ public class Main {
             sb.append(reports.findingAllNoDuplicateAboveThousand(integerArray));
 
             JaggerArray jaggerArray = new JaggerArray(10, 5);
+            Random random = new Random();
             for (int i = 0; i < 10; i++){
-                arrayServiceFulfill.fulfillArrayRandomly(jaggerArray.getElement(i), 1000);
+                for (int j = 0; j < 5; j++) {
+                    jaggerArray.setElement(i, j, random.nextInt(1000));
+                }
             }
             sb.append("\nJagger Array made randomly: ").append(jaggerArray);
             jaggerArrayService.sortByRowsSum(jaggerArray);
